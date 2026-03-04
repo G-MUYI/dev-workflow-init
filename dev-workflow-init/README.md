@@ -4,16 +4,42 @@
 
 ## 安装
 
-```bash
-# 通过 skills CLI 安装（推荐）
-npx skills add <your-repo>/dev-workflow-init
+### 方法 1：使用安装脚本（推荐）
 
-# 或手动复制
-# 将 dev-workflow-init/ 文件夹复制到对应 Agent 的 skills 目录：
-# Claude Code: .claude/skills/
-# Kiro:        .kiro/skills/
-# Cursor:      .agents/skills/
+1. 将整个仓库克隆或下载到本地
+2. 在**目标项目**的根目录打开终端
+3. 运行安装脚本：
+
+```bash
+# Windows
+path\to\install.bat
+
+# Linux/Mac
+bash path/to/install.sh
 ```
+
+脚本会自动检测 AI IDE 类型并安装到正确位置。
+
+### 方法 2：手动安装
+
+1. 在**目标项目**根目录创建对应的 skills 目录：
+   - Claude Code: `.claude/skills/`
+   - Kiro: `.kiro/skills/`
+   - Cursor: `.agents/skills/`
+
+2. 将 `dev-workflow-init/` 文件夹复制到上述目录中
+
+3. 最终结构应该是：
+   ```
+   your-project/
+   ├── .claude/skills/dev-workflow-init/    # 或 .kiro/skills/ 或 .agents/skills/
+   │   ├── SKILL.md
+   │   ├── README.md
+   │   └── ...
+   └── (你的项目文件)
+   ```
+
+**重要**：不要将 `dev-workflow-init` 文件夹直接放在项目根目录，必须放在 `.claude/skills/`、`.kiro/skills/` 或 `.agents/skills/` 目录下。
 
 ## 使用
 

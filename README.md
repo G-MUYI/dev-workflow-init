@@ -72,13 +72,14 @@ dev-workflow-init/
 **安装后的项目结构：**
 ```
 your-project/
-├── .ai/skills/dev-workflow-init/        # 统一存储位置
+├── .ai/skills/dev-workflow-init/        # 初始化工具
 ├── .claude/skills/dev-workflow-init/    # Claude Code（符号链接或副本）
 ├── .kiro/skills/dev-workflow-init/      # Kiro（符号链接或副本）
 ├── .cursor/skills/dev-workflow-init/    # Cursor（符号链接或副本）
 ├── .vscode/skills/dev-workflow-init/    # VSCode（符号链接或副本）
 ├── .windsurf/skills/dev-workflow-init/  # Windsurf（符号链接或副本）
-└── AGENTS.md                            # 通用规则（初始化后生成）
+├── skills/                              # 项目特定的工作流 skills（初始化后创建）
+└── AGENTS.md                            # 统一规则源（初始化后生成）
 ```
 
 ## 常见问题

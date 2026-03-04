@@ -105,13 +105,14 @@ sudo bash ~/ai-skills/dev-workflow-init/install-unified.sh
 安装完成后，检查你的项目文件夹，应该能看到这些新文件夹：
 ```
 my-project/
-├── .ai/
+├── .ai/skills/dev-workflow-init/    # 初始化工具
 ├── .claude/
 ├── .cursor/
 ├── .kiro/
 ├── .vscode/
 ├── .windsurf/
-└── AGENTS.md
+├── skills/                          # 项目特定的工作流 skills（初始化后创建）
+└── AGENTS.md                        # 统一规则源（初始化后生成）
 ```
 
 如果看到了，说明安装成功！

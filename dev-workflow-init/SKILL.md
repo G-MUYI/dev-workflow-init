@@ -91,6 +91,11 @@ metadata:
 
 生成后告知用户：
 > AGENTS.md 已生成。接下来为你推荐适配的 skills 并编排工作流。
+n**目录结构说明：**
+- `.ai/skills/` - 存放初始化工具（如 dev-workflow-init）
+- `skills/` - 存放项目特定的工作流 skills（推荐的 skills 应安装在此目录）
+- `AGENTS.md` - 统一规则文档
+
 
 ### 阶段三：推荐 Skills 并编排工作流
 

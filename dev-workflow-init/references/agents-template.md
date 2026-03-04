@@ -5,6 +5,14 @@
 ```markdown
 # AGENTS 统一规则源
 
+> **重要说明：** 本文件是项目的统一规则源，所有 AI Agent（Claude Code、Kiro、Cursor、VSCode Copilot、Windsurf 等）都应遵循此规范。
+
+## 目录结构说明
+
+- `.ai/skills/` - 存放初始化工具（如 dev-workflow-init）
+- `skills/` - 存放项目特定的工作流 skills
+- `AGENTS.md` - 本文件，统一规则文档
+
 ## 项目意图
 - 核心目标：{project_goal}
 - 目标用户：{target_users}

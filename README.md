@@ -2,6 +2,18 @@
 
 一个 AI 对话式 skill，通过需求访谈自动初始化项目开发工作流。
 
+> 💡 **第一次使用？** 查看 [5 分钟快速上手指南](GETTING_STARTED.md)
+
+## 这是什么？
+
+想象一下：
+- 🤖 你和 AI 聊天，它问你 8 个问题
+- 📝 AI 自动生成项目规范文档
+- 🔍 AI 推荐适合你项目的工具
+- 🔄 AI 帮你规划开发流程
+
+**就这么简单！**
+
 ## 特性
 
 - 🎯 通过 8 个问题收集项目需求
@@ -12,7 +24,19 @@
 
 ## 快速开始
 
-### 安装（推荐 - 统一方案）
+### 🎯 三步上手
+
+1. **安装** - 运行一个命令
+2. **启动** - 对 AI 说"启动"
+3. **回答** - 回答 8 个问题
+
+就这么简单！
+
+### 📦 详细安装步骤
+
+**新手推荐：** [图文安装教程](INSTALLATION.md)
+
+**快速安装：**
 
 在**目标项目**根目录运行：
 
@@ -25,12 +49,12 @@ bash path/to/dev-workflow-init/install-unified.sh
 ```
 
 **特点：**
-- 创建统一的 `.ai/skills/` 目录存储 skill
-- 自动为所有 IDE 配置（Claude Code、Kiro、Cursor、VSCode、Windsurf）
-- 优先使用符号链接（需要管理员权限），失败则自动降级为复制文件
-- 一次安装，支持所有 IDE
+- ✅ 创建统一的 `.ai/skills/` 目录存储 skill
+- ✅ 自动为所有 IDE 配置（Claude Code、Kiro、Cursor、VSCode、Windsurf）
+- ✅ 优先使用符号链接（需要管理员权限），失败则自动降级为复制文件
+- ✅ 一次安装，支持所有 IDE
 
-### 2. 使用
+### 🚀 开始使用
 
 在 AI IDE 中打开项目，在对话框输入：
 
@@ -38,14 +62,32 @@ bash path/to/dev-workflow-init/install-unified.sh
 启动
 ```
 
+AI 会开始问你问题，像这样：
+
+```
+你好！我会通过 8 个问题帮你梳理项目需求...
+
+现在开始第一个问题：
+
+1️⃣ 你想实现的核心效果是什么？请用 1-2 句话描述。
+```
+
 然后跟随 AI 的提问完成需求访谈。
 
-详细说明请查看 [快速开始指南](QUICKSTART.md)。
+**更多帮助：**
+- 📖 [5 分钟快速上手](GETTING_STARTED.md) - 小白友好的完整教程
+- 📦 [图文安装教程](INSTALLATION.md) - 详细的安装步骤
+- 📚 [快速开始指南](QUICKSTART.md) - 技术文档
 
-## 文档
+## 文档导航
 
-- [跨 IDE 兼容性指南](CROSS_IDE_COMPATIBILITY.md) - **支持的 IDE 和配置详情**
-- [快速开始指南](QUICKSTART.md) - 第一次使用必读
+### 🎓 新手入门
+- [5 分钟快速上手](GETTING_STARTED.md) - **推荐第一次使用的用户阅读**
+- [图文安装教程](INSTALLATION.md) - 详细的安装步骤说明
+
+### 📚 进阶文档
+- [跨 IDE 兼容性指南](CROSS_IDE_COMPATIBILITY.md) - 支持的 IDE 和配置详情
+- [快速开始指南](QUICKSTART.md) - 技术文档
 - [Skill 说明](dev-workflow-init/README.md) - 详细功能介绍
 - [使用示例](dev-workflow-init/USAGE_EXAMPLES.md) - 不同场景的使用方式
 - [测试指南](dev-workflow-init/TESTING.md) - 测试和问题排查
@@ -106,6 +148,8 @@ A:
 ### Q: 可以在多个项目中使用吗？
 
 A: 可以。在每个项目中运行安装脚本即可。
+
+**更多问题？** 查看 [完整 FAQ](FAQ.md) 或 [提交 Issue](https://github.com/G-MUYI/dev-workflow-init/issues)
 
 ### Q: 支持哪些 AI IDE？
 

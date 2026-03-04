@@ -8,13 +8,27 @@
 - 📝 自动生成项目专属的 `AGENTS.md` 规则文件
 - 🔍 联网搜索并推荐适配的 skills 和工具
 - 🔄 编排完整的开发工作流步骤
-- 🤖 支持 Claude Code、Kiro、Cursor 等 AI IDE
+- 🤖 **跨 IDE 支持**：Claude Code、Kiro、Cursor、VSCode Copilot、Windsurf 等
 
 ## 快速开始
 
-### 1. 安装
+### 方法 1：通用安装（推荐 - 支持所有 IDE）
 
 在**目标项目**根目录运行：
+
+```bash
+# Windows
+path\to\dev-workflow-init\install-universal.bat
+
+# Linux/Mac
+bash path/to/dev-workflow-init/install-universal.sh
+```
+
+脚本会自动检测已安装的 IDE，并询问是否为所有 IDE 安装。
+
+### 方法 2：单 IDE 安装
+
+如果只使用一个 IDE：
 
 ```bash
 # Windows
@@ -38,6 +52,7 @@ bash path/to/dev-workflow-init/install.sh
 
 ## 文档
 
+- [跨 IDE 兼容性指南](CROSS_IDE_COMPATIBILITY.md) - **支持的 IDE 和配置详情**
 - [快速开始指南](QUICKSTART.md) - 第一次使用必读
 - [Skill 说明](dev-workflow-init/README.md) - 详细功能介绍
 - [使用示例](dev-workflow-init/USAGE_EXAMPLES.md) - 不同场景的使用方式
@@ -79,7 +94,15 @@ A: 可以。在每个项目中运行安装脚本即可。
 
 ### Q: 支持哪些 AI IDE？
 
-A: Claude Code、Kiro、Cursor。安装脚本会自动检测。
+A:
+- ✅ Claude Code
+- ✅ Kiro
+- ✅ Cursor
+- ✅ VSCode (with GitHub Copilot)
+- ✅ Windsurf
+- ⚠️ Trae (待测试)
+
+详见 [跨 IDE 兼容性指南](CROSS_IDE_COMPATIBILITY.md)。
 
 ## 许可证
 

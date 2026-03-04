@@ -12,31 +12,23 @@
 
 ## 快速开始
 
-### 方法 1：通用安装（推荐 - 支持所有 IDE）
+### 安装（推荐 - 统一方案）
 
 在**目标项目**根目录运行：
 
 ```bash
 # Windows
-path\to\dev-workflow-init\install-universal.bat
+path\to\dev-workflow-init\install-unified.bat
 
 # Linux/Mac
-bash path/to/dev-workflow-init/install-universal.sh
+bash path/to/dev-workflow-init/install-unified.sh
 ```
 
-脚本会自动检测已安装的 IDE，并询问是否为所有 IDE 安装。
-
-### 方法 2：单 IDE 安装
-
-如果只使用一个 IDE：
-
-```bash
-# Windows
-path\to\dev-workflow-init\install.bat
-
-# Linux/Mac
-bash path/to/dev-workflow-init/install.sh
-```
+**特点：**
+- 创建统一的 `.ai/skills/` 目录存储 skill
+- 自动为所有 IDE 配置（Claude Code、Kiro、Cursor、VSCode、Windsurf）
+- 优先使用符号链接（需要管理员权限），失败则自动降级为复制文件
+- 一次安装，支持所有 IDE
 
 ### 2. 使用
 
@@ -70,8 +62,9 @@ bash path/to/dev-workflow-init/install.sh
 dev-workflow-init-repo/
 ├── README.md                    # 本文件
 ├── QUICKSTART.md                # 快速开始指南
-├── install.bat                  # Windows 安装脚本
-├── install.sh                   # Linux/Mac 安装脚本
+├── CROSS_IDE_COMPATIBILITY.md   # 跨 IDE 兼容性指南
+├── install-unified.bat          # Windows 统一安装脚本
+├── install-unified.sh           # Linux/Mac 统一安装脚本
 └── dev-workflow-init/           # Skill 源码
     ├── SKILL.md                 # 核心 skill 文件
     ├── README.md                # Skill 说明
@@ -82,11 +75,33 @@ dev-workflow-init-repo/
         └── agents-template.md   # AGENTS.md 模板
 ```
 
+**安装后的项目结构：**
+```
+your-project/
+├── .ai/skills/dev-workflow-init/        # 统一存储位置
+├── .claude/skills/dev-workflow-init/    # Claude Code（符号链接或副本）
+├── .kiro/skills/dev-workflow-init/      # Kiro（符号链接或副本）
+├── .cursor/skills/dev-workflow-init/    # Cursor（符号链接或副本）
+├── .vscode/skills/dev-workflow-init/    # VSCode（符号链接或副本）
+├── .windsurf/skills/dev-workflow-init/  # Windsurf（符号链接或副本）
+├── .cursorrules                         # Cursor 规则
+├── .vscode/settings.json                # VSCode 配置
+└── AGENTS.md                            # 通用规则（初始化后生成）
+```
+
 ## 常见问题
 
 ### Q: 为什么 AI 说"启动"后没有反应？
 
-A: 确保 skill 安装在正确位置（`.claude/skills/`、`.kiro/skills/` 或 `.agents/skills/`），不是项目根目录。
+A: 确保 skill 安装在正确位置。运行 `install-unified.bat/sh` 会自动配置所有 IDE。
+
+### Q: 符号链接和复制文件有什么区别？
+
+A:
+- **符号链接**（需要管理员权限）：只需维护 `.ai/skills/` 中的一份文件，所有 IDE 自动同步
+- **复制文件**（无需特殊权限）：每个 IDE 有独立副本，更新时需重新运行安装脚本
+
+安装脚本会自动尝试符号链接，失败则降级为复制文件。
 
 ### Q: 可以在多个项目中使用吗？
 
